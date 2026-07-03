@@ -1,4 +1,3 @@
-
 /*
  * Copyright (C) 2010 The Android Open Source Project
  * Copyright (C) 2012-14, The Linux Foundation. All rights reserved.
@@ -33,6 +32,12 @@
 #include "hdmi.h"
 #include "hwc_virtual.h"
 #include "mdp_version.h"
+
+#include <unistd.h>
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
+
 using namespace overlay;
 namespace qhwc {
 #define HWC_UEVENT_SWITCH_STR  "change@/devices/virtual/switch/"

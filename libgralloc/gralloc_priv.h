@@ -25,6 +25,9 @@
 #include <pthread.h>
 #include <errno.h>
 #include <unistd.h>
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
 
 #include <cutils/native_handle.h>
 

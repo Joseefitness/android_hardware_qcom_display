@@ -33,3 +33,9 @@ ifeq ($(TARGET_USES_QCOM_BSP),true)
 # Enable QCOM Display features
     common_flags += -DQTI_BSP
 endif
+
+# Header include paths (libutils/libhardware/nativewindow no longer on the default search path)
+common_includes += $(TOP)/system/core/libutils/include
+common_includes += $(TOP)/hardware/libhardware/include
+common_includes += $(TOP)/system/core/include
+common_includes += $(TOP)/frameworks/native/libs/nativewindow/include

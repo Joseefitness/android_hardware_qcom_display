@@ -42,6 +42,11 @@
 #include "hwc_session.h"
 #include "hwc_debugger.h"
 
+#include <unistd.h>
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
+
 #define __CLASS__ "HWCSession"
 
 static sde::HWCSession::HWCModuleMethods g_hwc_module_methods;

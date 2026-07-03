@@ -1,0 +1,20 @@
+package {
+    default_applicable_licenses: ["hardware_qcom_display_license"],
+}
+
+license {
+    name: "hardware_qcom_display_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-BSD"],
+    license_text: [],
+}
+
+cc_library_headers {
+    name: "display_intf_headers",
+    vendor_available: true,
+    export_include_dirs: [
+        "displayengine/include",
+        "libgralloc",
+        "libqdutils",
+    ],
+}
