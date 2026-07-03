@@ -6,7 +6,10 @@ LOCAL_MODULE                  := libqdutils
 LOCAL_VENDOR_MODULE           := true
 LOCAL_MODULE_TAGS             := optional
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libui libbinder libqservice
-LOCAL_C_INCLUDES              := $(common_includes)
+LOCAL_C_INCLUDES              := $(common_includes) \
+	$(TOP)/system/core/libutils/include \
+	$(TOP)/system/core/include \
+	$(TOP)/hardware/libhardware/include
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdutils\" -Wno-float-conversion
 LOCAL_HEADER_LIBRARIES        := display_headers generated_kernel_headers
 LOCAL_SRC_FILES               := profiler.cpp mdp_version.cpp \
@@ -24,6 +27,10 @@ LOCAL_SRC_FILES                 := qdMetaData.cpp qd_utils.cpp
 LOCAL_CFLAGS                    := $(common_flags)
 LOCAL_CFLAGS                    += -DLOG_TAG=\"DisplayMetaData\"
 LOCAL_MODULE_TAGS               := optional
+LOCAL_C_INCLUDES                := $(common_includes) \
+	$(TOP)/system/core/libutils/include \
+	$(TOP)/system/core/include \
+	$(TOP)/hardware/libhardware/include
 LOCAL_MODULE                    := libqdMetaData
 LOCAL_VENDOR_MODULE             := true
 include $(BUILD_SHARED_LIBRARY)
@@ -32,7 +39,10 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SHARED_LIBRARIES          := liblog libcutils
-LOCAL_C_INCLUDES                := $(common_includes)
+LOCAL_C_INCLUDES                := $(common_includes) \
+	$(TOP)/system/core/libutils/include \
+	$(TOP)/system/core/include \
+	$(TOP)/hardware/libhardware/include
 LOCAL_HEADER_LIBRARIES          := display_headers generated_kernel_headers
 LOCAL_SRC_FILES                 := qdMetaData.cpp qd_utils.cpp
 LOCAL_CFLAGS                    := $(common_flags) -Wno-sign-conversion

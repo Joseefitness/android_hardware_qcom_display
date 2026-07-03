@@ -31,6 +31,10 @@
 #include <linux/msm_mdp.h>
 #include "mdp_version.h"
 #include "qd_utils.h"
+#include <unistd.h>
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
 
 #define DEBUG 0
 

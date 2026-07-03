@@ -28,6 +28,10 @@
 #include <cutils/native_handle.h>
 #include <utils/Singleton.h>
 #include "adreno_utils.h"
+#include <unistd.h>
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
 
 /*****************************************************************************/
 

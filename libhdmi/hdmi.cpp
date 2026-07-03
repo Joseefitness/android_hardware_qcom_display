@@ -29,6 +29,10 @@
 #include "overlayUtils.h"
 #include "overlay.h"
 #include "qd_utils.h"
+#include <unistd.h>
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
 
 using namespace android;
 using namespace qdutils;
